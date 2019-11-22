@@ -1,10 +1,63 @@
-# React Application with JWT Authentication
+# Sailor Moon Ecom with JWT Authentication
 
-### Overview
+This project includes Home page with slider images, Product page that allows the user to filter by product type and price, Contact page with form, Footer with social media links, Backend API server and database server, Responsivepages for various device types and Accessibility and security. a MYSQL database is  designed and deployed on desktops to accommodate the ecommerce database. The ecommerce database is  comprised of 3 tables, storing information product, pricing, and contacts.
 
-This is an example application that serves an ExpressJS JSON api to a React client application. The React application is configured for a basic JWT authentication flow **WITHOUT** using redux. Great for those of you that are somewhat familiar with Node, Express, and Mongoose, but want to see an implementation of React + React Router with JWT authentication.
+## Getting Started
 
-The React client app could easily be restructured to keep current user information in a Redux Store. Give it a shot!
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software:
+
+VSCODE
+
+## Running the tests
+
+Saying "npm test" will run a;; tests.
+
+### Break down into tests
+
+These tests check if the servers are working.
+
+```
+describe('Test for "/" api endpoint', () => {
+     it("/ should send back 200 status code and atleast 1 product", done => {
+       chai
+         .request(app)
+         .get("/product")
+        .end((error, response) => {
+           console.log("response - ", response.body);
+           expect(response.body.length > 0).equal(true);
+           expect(response.status).equal(200);
+          done();
+        });
+     });
+   });
+```
+
+## Deployment
+
+"npm run start" will deploy site
+
+## Built With
+
+- React 
+- NodeJS + Express + Mongoose party in the back
+- React Router 4.*
+- JSON Web Token authentication 
+
+## Authors
+
+* **Lenny Dickey** - *Initial work* - [LennyDickey](https://github.com/LennyDickey)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* This site was insipred by Sailor Moon.
 
 ### Installation + Development
 
@@ -34,44 +87,3 @@ The React client app could easily be restructured to keep current user informati
 9. From the client directory, run `npm start` to boot up the client application.
 10. $$$ Profit
 
-### Usage
-
-It's common to identify the user making an authenticated request on the server side. In this application, the `verifyToken` middleware (declared in `/serverAuth.js`) decodes a provided token, and makes sure the request is coming from a valid user. When the user is validated, it is added to the `req` object as `req.user`. 
-
-Here's an example of how you can access the 'current user' from the server side app, assuming a user is logged in and sending an authenticated request:
-
-```javascript
-const express = require('express')
-const mySpecialRouter = new express.Router()
-
-// JWT AUTH MIDDLEWARE:
-const { verifyToken }  = require('../serverAuth.js')
-
-const Comment = require('../models/Comment.js')
-
-// all routes declared after this middleware require a token
-mySpecialRouter.use(verifyToken)
-mySpecialRouter.post("/comments", (req, res) => {
-  // since this route succeeds 'verifyToken', it has the current user in req.user
-  // so we can easily associate new mongo documents to the current user:
-  Comment.create({ ...req.body, user: req.user }, (err, comment) => {
-    if(err) return console.log(err)
-    res.json({ success: true, message: "Comment created.", comment })
-  })
-})
-
-module.exports = mySpecialRouter
-```
-
-
-
-### Technologies
-- React client application business in the front
-- NodeJS + Express + Mongoose party in the back
-- React Router 4.*
-- Milligram CSS so it doesn't look like garbage
-- JSON Web Token authentication flow
-
-### Important Notes
-
-- While the Mongoose user schema enforces email uniqueness, there's no handler for duplicate user emails on the client side. (A user wouldn't know why they couldn't create their account if they came across this scenario).
