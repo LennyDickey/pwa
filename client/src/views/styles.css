@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css?family=Mali:600&display=swap");
+
+.navbar {
+  background-color: rgba(154, 96, 230, 0.5);
+  border-bottom: 1px solid #8baffc;
+  font-family: "Roboto Mono", monospace;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: rgb(245, 134, 255);
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+/*WHO*/
+.slide-container {
+  width: 70%;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+}
+
+.each-slide span {
+  padding: 200px;
+  font-size: 20px;
+  background: #da9dc1;
+  text-align: center;
+}
+
+.each-fade {
+  display: flex;
+}
+
+.each-fade .image-container {
+  width: 75%;
+  overflow: hidden;
+}
+
+.each-fade .image-container img {
+  width: 100%;
+}
+
+.each-fade h2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #adceed;
+}
+
+#who {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+#who .btn-who {
+  background-color: #b461db;
+  color: #fff;
+  width: 50%;
+}
+
+#who .btn-who:hover {
+  background-color: transparent;
+  border: 1px solid #798aeb;
+  color: #3cd1f7;
+}
+
+/*CONTACT*/
+
+* {
+  box-sizing: border-box;
+  font-family: "Mali";
+}
+body {
+  background: #9fd9f0;
+  min-width: 320px;
+}
+h2 {
+  text-align: center;
+  margin: 50px 0;
+  color: #bd74e7;
+  font-size: 47px;
+  font-family: "Quicksand", sans-serif;
+}
+@media (max-width: 540px) {
+  h2 {
+    font-size: 28px;
+    margin: 30px 0;
+  }
+}
+form {
+  padding: 0 10%;
+}
+form section {
+  width: calc(50% - 40px);
+  padding: 20px;
+  background: #9a4be4;
+  margin: 20px;
+  border-radius: 5px;
+}
+form section.left {
+  float: left;
+}
+form section.right {
+  float: right;
+}
+form section .input-container {
+  padding: 10px;
+}
+form section .input-container label {
+  display: block;
+  margin-bottom: 4px;
+  color: white;
+  font-size: 16px;
+  text-shadow: 0px 2px 1px #65ad6b;
+  font-family: "Quicksand", sans-serif;
+}
+form section .input-container input,
+form section .input-container textarea {
+  width: 100%;
+  padding: 5px 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background: #d2f4fa;
+  box-shadow: 0 2px 0px #af3af3;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  color: #757575;
+}
+form section .input-container input:focus,
+form section .input-container textarea:focus {
+  outline: none;
+  background: white;
+}
+form section .input-container textarea {
+  height: 122px;
+  padding: 15px 10px;
+  resize: none;
+}
+form .send-container {
+  float: right;
+  width: 100%;
+  text-align: right;
+  margin-right: 20px;
+}
+form .send-container input {
+  background: #d48ef5;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+form .send-container input:hover {
+  background: #8e4ed8;
+}
+form:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media (max-width: 992px) {
+  form {
+    padding: 0 5%;
+  }
+}
+@media (max-width: 768px) {
+  form {
+    margin-bottom: 50px;
+  }
+  form section {
+    width: 100%;
+    margin: 0;
+  }
+  form section.left {
+    margin-bottom: -30px;
+  }
+  form .send-container {
+    margin-right: 0;
+    margin-top: 15px;
+  }
+  form .send-container input {
+    width: 100%;
+  }
+}
+
+/*WORK*/
+
+#work {
+  padding: 5rem 0;
+}
+
+#work .work-img {
+  position: relative;
+}
+
+#work .work-img .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(132, 208, 238, 0.5);
+  width: 100%;
+  height: 100%;
+  background-image: url("https://previews.123rf.com/images/asmati/asmati1603/asmati160301010/53558034-shopping-cart-and-add-mark-icon-line-icon-on-transparent-background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#work .work-img .img-overlay:hover {
+  opacity: 1;
+  z-index: 1;
+}
+
+/*FOOTER*/
+
+#footer {
+  padding: 2rem 0;
+  background-color: #e4a7f3;
+  color: white;
+}
+
+#footer a {
+  color: rgb(162, 88, 231);
+}
+
+#footer .fa {
+  padding: 0 5px;
+}
+
+/* Cards */
+
+#foo {
+  color: #330548;
+  font-size: large;
+  border: 2px solid Violet;
+  background-color: rgba(191, 218, 245, 0.438);
+}
+
+#pwrap {
+  background-color: rgb(204, 235, 245);
+  background-image: url("https://www.trzcacak.rs/myfile/full/6-62324_stars-transparent-tumblr-purple-aesthetic-no-background.png");
+  margin-bottom: 0;
+}
+.lol {
+  /* background-color: rgba(163, 195, 227, 0.906); */
+  color: black;
+  font-family: "Mali", cursive;
+}
+
+.album {
+  background-image: url("https://i0.wp.com/www.togeproductions.com/wp-content/uploads/2017/06/stars-1.gif?w=1080");
+}
+
+#acc {
+  text-align: center;
+  color: #330548;
+  text-transform: uppercase;
+  font-size: large;
+  background-image: url("https://i0.wp.com/www.togeproductions.com/wp-content/uploads/2017/06/stars-1.gif?w=1080");
+}
+.card-body {
+  text-align: center;
+  /* height: 150px; */
+}
+.card-footer {
+  text-align: left;
+  font-size: x-large;
+}
+.card-title {
+  font-size: larger;
+}
+
+.pl {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 1.25rem;
+}
+
+#con {
+  background-image: url("https://i0.wp.com/www.togeproductions.com/wp-content/uploads/2017/06/stars-1.gif?w=1080");
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+/* #type{
+  padding: 25px 50px 75px 100px;
+} */
+.conrew {
+  background-image: url("https://i0.wp.com/www.togeproductions.com/wp-content/uploads/2017/06/stars-1.gif?w=1080");
+}
