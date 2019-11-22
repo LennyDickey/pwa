@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Mali:600&display=swap");
 
+*{
+  font-size: 2rem;
+
+}
+.SignUp{
+  padding: 250px;
+
+}
+.LogIn{
+  padding: 250px;
+}
 .navbar {
   background-color: rgba(154, 96, 230, 0.5);
   border-bottom: 1px solid #8baffc;
@@ -8,6 +19,7 @@
 
 .navbar .navbar-nav .nav-link {
   color: #ffffff;
+ font-weight: 100px;
 }
 
 .navbar .navbar-nav .nav-link:hover {
