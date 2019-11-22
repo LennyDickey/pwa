@@ -2,10 +2,9 @@
 
 This project includes Home page with slider images, Product page that allows the user to filter by product type and price, Contact page with form, Footer with social media links, Backend API server and database server, Responsivepages for various device types and Accessibility and security. a MYSQL database is  designed and deployed on desktops to accommodate the ecommerce database. The ecommerce database is  comprised of 3 tables, storing information product, pricing, and contacts.
 
-## Getting Started
+## Heroku Link
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
+https://project5sailormoon.herokuapp.com
 ### Prerequisites
 
 What things you need to install the software:
