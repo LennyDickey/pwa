@@ -1,5 +1,6 @@
 const User = require('../models/User.js')
 const signToken = require('../auth').signToken
+const products = require('../models/productsAPI')
 
 module.exports = {
 	// list all users
@@ -8,6 +9,25 @@ module.exports = {
 			res.json(users)
 		})
 	},
+	allProducts: (req, res) => {
+		products.find({}, (err,products) => {
+			res.json(products)
+		})
+	},
+	sportsGames: (req, res) => {
+		//query with mongoose
+			//query with mongoose
+			var query = products.find({}).select({"categories":1});
+		
+			query.exec(function (err, someValue) {
+				if (err) return next(err);
+				res.send(someValue);
+			});
+		},
+	
+		
+	
+
 
 	// get one user
 	show: (req, res) => {		

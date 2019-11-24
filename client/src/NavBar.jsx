@@ -28,7 +28,7 @@ const NavBar = props => {
             <span>
               <li class="nav-item">
                 <Link class="nav-link" to="/rth">
-                  RTH
+                  Products
                 </Link>
               </li>
               <li class="nav-item">
@@ -50,14 +50,12 @@ const NavBar = props => {
                 </Link>
               </li>
             </span>
-			
           )}
-		    <li class="nav-item">
+          <li class="nav-item">
             <Link class="nav-link" to="/Contact">
               Contact
             </Link>
           </li>
-
         </ul>
       </div>
     </nav>
