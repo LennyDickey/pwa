@@ -6,7 +6,7 @@ This project includes Home page with slider images, Product page that allows the
 
 https://project5sailormoon.herokuapp.com
 
-![Image of LightHouse](https://i.ibb.co/wLwndrN/Screen-Shot-2019-11-25-at-10-35-28-AM.png)
+![Image of LightHouse](https://imgur.com/TCgpbJk)
 
 
 ### Prerequisites
